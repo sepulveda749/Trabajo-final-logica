@@ -2,14 +2,12 @@
 
 class Program
 {
-    // Constantes (datos del problema)
     const int MAX_EMPLEADOS = 5;
     const int DIAS = 5;
     const double VALOR_HORA = 8000;
     const int HORAS_NORMALES = 40;
     const double RECARGO_EXTRA = 1.25;
 
-    // Vectores y matriz
     static string[] nombres = new string[MAX_EMPLEADOS];
     static double[,] horas = new double[MAX_EMPLEADOS, DIAS];
     static string[] dias = { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes" };
@@ -44,7 +42,6 @@ class Program
         Console.WriteLine("5. Salir");
     }
 
-    // Lee un entero y lo valida dentro de un rango
     static int LeerEntero(string mensaje, int min, int max)
     {
         int numero;
@@ -62,7 +59,6 @@ class Program
         return numero;
     }
 
-    // Lee un decimal y lo valida dentro de un rango
     static double LeerDecimal(string mensaje, double min, double max)
     {
         double numero;
@@ -125,7 +121,6 @@ class Program
         Console.WriteLine("Horas registradas para " + nombres[e] + ".");
     }
 
-    // Acumulador: suma las horas de la semana de un empleado
     static double CalcularHorasSemana(int e)
     {
         double total = 0;
@@ -136,7 +131,6 @@ class Program
         return total;
     }
 
-    // Calcula el pago según las horas totales
     static double CalcularPago(double totalHoras)
     {
         double pago;
